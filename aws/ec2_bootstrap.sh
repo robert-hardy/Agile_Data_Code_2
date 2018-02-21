@@ -242,6 +242,7 @@ mv /home/ubuntu/elasticsearch-hadoop-6.1.3 /home/ubuntu/elasticsearch-hadoop
 cp /home/ubuntu/elasticsearch-hadoop/dist/elasticsearch-hadoop-6.1.3.jar /home/ubuntu/Agile_Data_Code_2/lib/
 cp /home/ubuntu/elasticsearch-hadoop/dist/elasticsearch-spark-20_2.10-6.1.3.jar /home/ubuntu/Agile_Data_Code_2/lib/
 echo "spark.speculation false" | sudo tee -a /home/ubuntu/spark/conf/spark-defaults.conf
+echo "spark.ui.enabled true" | sudo tee -a /home/ubuntu/spark/conf/spark-defaults.conf
 rm -f /tmp/elasticsearch-hadoop-6.1.3.zip
 rm -rf /home/ubuntu/elasticsearch-hadoop/conf/spark-defaults.conf
 
