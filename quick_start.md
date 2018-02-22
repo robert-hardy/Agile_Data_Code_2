@@ -1,0 +1,13 @@
+- `./ec2.sh`
+- See it start in the EC2 console. While there, make sure that my ip is in the security group.
+- `./ec2_create_tunnel.sh`
+- SSH to the machine and watch `/tmp/ec2_bootstrap.sh.log`.
+- When that log file is removed it means all done.
+- See if Mongo and ElasticSearch are listening, with `sudo lsof -i -P -n | grep LISTEN`.
+- `cd Agile_Data_Code_2`
+- Download data with `./download.sh` (can also `./download_weather.sh` but it takes about 5 mins).
+- From the `Agile_Data_Code_2` directory, start up the PySpark REPL with `PYSPARK_DRIVER_PYTHON=ipython pyspark --jars lib/mongo-hadoop-spark-2.0.2.jar,lib/mongo-java-driver-3.4.2.jar,lib/mongo-hadoop-2.0.2.jar --driver-class-path lib/mongo-hadoop-spark-2.0.2.jar:lib/mongo-java-driver-3.4.2.jar:lib/mongo-hadoop-2.0.2.jar`
+- Convert to Parquet and JSON Lines by copy-pasting `ch04/convert_data.py`.
+- Create the smaller file of features by copy-pasting `ch07/extract_features.py`.
+- Exit and start the Notebook with `jupyter notebook`.
+- Now we can step through the Notebook `ch02/Introduction to PySpark.ipynb`.
