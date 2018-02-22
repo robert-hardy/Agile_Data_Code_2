@@ -36,3 +36,10 @@ echo "Forwarding the remote machine's port 8080 to the local port 8080, which yo
 echo 'Executing: ssh -N -i ./agile_data_science.pem -o StrictHostKeyChecking=no -L 8080:localhost:8080 ubuntu@$EC2_HOSTNAME &'
 ssh -N -i ./agile_data_science.pem -o StrictHostKeyChecking=no -L 8080:localhost:8080 ubuntu@$EC2_HOSTNAME &
 echo ""
+
+# Create a tunnel for port 4040 for Spark
+echo "Next we will forward the port that Spark uses..."
+echo "Forwarding the remote machine's port 4040 to the local port 4040, which you can then access at http://localhost:4040"
+echo 'Executing: ssh -N -i ./agile_data_science.pem -o StrictHostKeyChecking=no -L 4040:localhost:4040 ubuntu@$EC2_HOSTNAME &'
+ssh -N -i ./agile_data_science.pem -o StrictHostKeyChecking=no -L 4040:localhost:4040 ubuntu@$EC2_HOSTNAME &
+echo ""
