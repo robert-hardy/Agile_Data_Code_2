@@ -37,13 +37,6 @@ cd Agile_Data_Code_2
 
 Note: to run the web applications and view them at http://localhost:5000 you will now need to run the ec2_create_tunnel.sh script from your local machine.
 
-If you have problems, please file an issue at https://github.com/rjurney/Agile_Data_Code_2/issues
-------------------------------------------------------------------------------------------------------------------------
-
-For help building 'big data' applications like this one, or for training regarding same, contact Russell Jurney <rjurney@datasyndrome.com> or find more information at http://datasyndrome.com
-
-Enjoy! Russell Jurney @rjurney <russell.jurney@gmail.com> http://linkedin.com/in/russelljurney
-
 END_HELLO
 
 cat <<EOF | sudo tee /etc/update-motd.d/99-agile-data-science
